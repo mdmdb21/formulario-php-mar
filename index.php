@@ -15,11 +15,12 @@
         <form action="send.php" method="post">
             <!--atributo para enviar a otra página send.php, post para que sea un envio de form seguro -->
             <h1>Formulario</h1>
+            <br>
             <ul class="fields">
                 <li class="field name">
                     <label>
                         Nombre (*)
-                        <input placeholder="María" name="nombre" type="text" id="nombre">
+                        <input placeholder="María" name="nombre" type="text" id="nombre" value="<?=$_REQUEST['nombre']??"María";?>">
                     </label>
                 </li>
                 <li class="field apellido">
@@ -47,7 +48,7 @@
                 </li>
                 <li class="field email">
                     <label>Email (*)
-                        <input id="email" type="email" name="email" placeholder="mar.barbeitos@gmail.com">
+                        <input id="email" type="email" name="email" placeholder="mar.barbeitos@gmail.com" value="<?=$_REQUEST['email']??"mar.barbeitos@gmail.com";?>">
                     </label>
                 </li>
                 <li class="field phone">
@@ -57,7 +58,6 @@
                 </li>
                 
             </ul>
-            
             <div aria-describedby="nombre email" role="alert" id="alert">
                 Los campos con asterisco (*) son obligatorios
             </div>

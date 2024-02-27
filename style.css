@@ -18,6 +18,7 @@ h1{
     font-size: var(--step-3);
     font-size: var(--step-3);
     gap: 1rem;
+    
 }
 
 h2{
@@ -27,6 +28,7 @@ h2{
 h3{
     font-size: var(--step-1);
 }
+
 body {
     font-family: system-ui, sans-serif;
     font-size: var(--step-0);
@@ -43,16 +45,13 @@ body {
     border-style: hidden;
     gap: 1rem;
     
-    
 }
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-
-        min-width: 400px;
-       
+        min-width: 375px;
         align-items: flex-start;
         padding: 1rem;
         background-color: rgb(179, 206, 230);
@@ -60,15 +59,19 @@ body {
     }
     form input {
         margin-bottom: 5px;
+        
     }
 
 li.field > label > input {
     display: block;
+   
 }    
 .sexo {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: .5rem;
     text-align: left;
-    padding: 0;
+    
 }
 
 .sex-fieldset {
@@ -81,7 +84,10 @@ ul {
     list-style: none;
     padding-left: 0;
 }
-
+#alert {
+    gap: 1.5rem;
+    color: rgb(190, 56, 56);
+}
 fieldset {
     border-style: none; 
 }
@@ -97,7 +103,8 @@ legend {
 }
 
 input {
-    border: 1px solid;
+    border-style: none;
+    /* border: 1px solid; */
     min-height: 1.5rem; 
     outline-style: none;
     max-height: fit-content;
@@ -111,10 +118,12 @@ input {
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
+    border-radius: .5rem;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+   
 }
   
 .btn-enviar:hover {
